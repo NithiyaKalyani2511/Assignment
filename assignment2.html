@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 2. Write a JavaScript function to find the maximum element in an array.
+     document.write(`2. The largest element in an array`);
+    let arr= [5, 2, 9, 1, 7];
+    var largest = arr[0];
+
+for (var i = 0; i < arr.length; i++) {
+  if (arr[i] > largest ) {
+    largest = arr[i];
+  }
+}
+console.log(largest);
+document.write("<br>"+ "<br>"+"The largest element in an array ",largest);
+
+
+
+// 3.	Write a JavaScript program to remove a specific element from an array.
+
+document.write("<br>"+ "<br>"+` 3.	Write a JavaScript program to remove a specific element from an array.`)
+
+
+let array1 =[1, 2, 3, 4, 5];
+
+let index = array1.indexOf(3); 
+array1.splice(index, 1);
+console.log(array1); 
+document.write("<br>"+ "<br>"+ " Remove a specific element ",array1);
+
+// 4.	Write a JavaScript program to find the second smallest element in an array
+        
+document.write("<br>"+ "<br>"+ ` 4.	Write a JavaScript program to find the second smallest element in an array.`);
+
+let arr1= [5, 2, 9, 1, 7];
+
+ var smallest = arr1[0] ; ;
+ for (var i = 0; i < arr1.length; i++) 
+
+ arr1.sort(function(a, b) {
+    return a - b;
+  });
+  let secondSmallest = arr1[1];
+ console.log (secondSmallest);
+ document.write("<br>"+ "<br>"+ " The second smallest element in an array ",secondSmallest);
+
+
+
+
+//  5.	Write a JavaScript function to check if two arrays are equal (contain the same elements in the same order).
+
+
+ document.write("<br>"+ "<br>"+ `5.	Write a JavaScript function to check if two arrays are equal (contain the same elements in the same order).`);
+ function arraysEqual(a, b) {
+  return JSON.stringify(a) === JSON.stringify(b);
+}
+
+
+var array4 = [1, 2, 3];
+var array5 = [1, 2, 3];
+var array6 = [3, 2, 1];
+
+document.write("<br>"+ "<br>"+"array1 [1, 2, 3] and array2 [1, 2, 3] are equal: " + arraysEqual(array4, array5) + "<br>");
+document.write("<br>"+"array1 [1, 2, 3] and array3 [3, 2, 1] are equal: " + arraysEqual(array4, array6) + "<br>");
+
+
+// 6.	Write a JavaScript program to find the maximum sum subarray within a given array of numbers.
+
+document.write("<br>"+ `6.	Write a JavaScript program to find the maximum sum subarray within a given array of numbers.`);
+
+var maxSubArray = function(nums) {
+    let sum = 0,
+    result = 0;
+    for (let i = 0; i < nums.length; i++) {
+        sum = Math.max(0, sum + nums[i]);
+        result = Math.max(sum, result);
+    }
+    return result ;
+};
+
+let nums = [-2,1,-3,4,-1,2,1,-5,4];
+// console.log(maxSubArray(nums));
+document.write("<br>"+"<br>"+"The maximum sum subarray within a given array of number : " + maxSubArray(nums) + "<br>");
+
+
+// 7.	Write a JavaScript function to calculate the power of a number recursively.
+
+document.write("<br>"+ `7.	Write a JavaScript function to calculate the power of a number recursively.`);
+
+function power(base, exponent) {
+  if (exponent === 0) {
+    return 1;
+  } else {
+    return base * power(base, exponent - 1);
+  }
+}
+
+
+document.write("<br>"+"<br>"+"The power of a number 2 : " + power(2, 4) + "<br>");
+
+
+
+
+
+
+// 8.	Write a JavaScript function to sort an array of numbers in ascending order.
+
+
+document.write("<br>"+ `8.	Write a JavaScript function to sort an array of numbers in ascending order.`);
+function sortNumbers(arr) {
+  return arr.sort((a, b) => a - b);
+}
+
+// test the function
+let numbers = [5,2,9,1,8];
+document.write("<br>"+"<br>"+"The array of numbers in ascending order : " + sortNumbers(numbers) + ". <br>");
+
+
+// 9.	Write a JavaScript function to find the number of occurrences of a substring in a given string.
+
+document.write("<br>"+ `9.	Write a JavaScript function to find the number of occurrences of a substring in a given string.`);
+
+
+const arr8 = ["Hello","hello","hello"];
+
+const count = {};
+
+for (const element of arr8) {
+  if (count[element]) {
+    count[element] += 1;
+  } else {
+    count[element] = 1;
+  }
+}
+
+document.write("<br>"+"<br>"+`The number of occurrences of a substring(hello) in a given string : `+count.hello+"<br>"+"<br>"); 
+
+// 10.	Write a JavaScript function to find the intersection of two arrays without duplicates.
+
+document.write("<br>"+ `10.	Write a JavaScript function to find the intersection of two arrays without duplicates.`);
+
+const array7 = [1, 2, 2, 3];
+const array8 = [2, 3, 4];
+var commonValues = [];
+var i, j;
+var array7Length = array7.length;
+var array8Length = array8.length;
+
+for (i = 0; i < array7Length; i++) {
+    for (j = 0; j < array8Length; j++) {
+        if (array7[i] === array8[j]) {
+            commonValues.push(array7[i]);
+        }
+    }
+}
+console.log(commonValues);
+document.write("<br>"+"<br>"+`The intersection between two arrays : `+commonValues+"<br>"+"<br>"); 
+     </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1</title>
+</head>
+<body>
+    <body style = "text-align: center; font-size: 20px;"> 
+        Assignment 1<br>  <br>
+        Enter a number: <input id = "num">  
+        <br><br>  
+        <button onclick = "fact()"> Factorial </button>  
+        <p id = "res"></p>  
+        <script>  
+        function fact(num){
+        var num,i, n;  
+         
+        num = document.getElementById("num").value;  
+       
+    let ans = 1; 
+      
+    if(num === 0)
+        return 1;
+    for ( i = 2; i <= num; i++) 
+        ans = ans * i; 
+     document.getElementById("res").innerHTML = "The factorial of the number " + num + " is: " + ans;  
+        }  
+        
+        </script> 
+        
+       
+          
+</body>
+</html>
