@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+// 11.	Write a JavaScript program to find the second smallest element in an array
+        
+document.write(` 11.Write a JavaScript program to find the second smallest element in an array.`);
+
+let arr1= [10, 5, 20, 3, 8, 15];
+
+ var smallest = arr1[0] ; 
+ for (var i = 0; i < arr1.length; i++) 
+
+ arr1.sort(function(a, b) {
+    return a - b;
+  });
+  let secondSmallest = arr1[1];
+ console.log (secondSmallest);
+ document.write("<br>"+ "<br>"+ " The second smallest element in an array is : ",secondSmallest);
+
+
+
+// 12.	You are given a list of words: g,h,r,n,d,d . Write a program that sorts the words in alphabetical order and displays the result on a web page.
+        
+document.write("<br>"+ "<br>"+`12.You are given a list of words :g,h,r,n,d,d. Write a program that sorts the words in alphabetical order and displays the result on a web page.`);
+
+
+
+let input =['g','h','r','n','d','d'];
+
+let sorted_input=input.sort();
+
+console.log("The sorted words are: " + sorted_input)
+document.write("<br>"+ "<br>"+"The sorted words are: " + sorted_input);
+
+
+
+
+// 13.	You are given two arrays of numbers [1, 2, 3, 4, 5], [3, 4, 5, 6, 7]. Write a program that finds the common elements between the two arrays and displays the result on a web page.
+        
+document.write("<br>"+ "<br>"+`13.	You are given two arrays of numbers [1, 2, 3, 4, 5], [3, 4, 5, 6, 7]. Write a program that finds the common elements between the two arrays and displays the result on a web page.`);
+
+const array7 = [1, 2, 3, 4, 5];
+const array8 = [3, 4, 5, 6, 7];
+var commonValues = [];
+var i, j;
+var array7Length = array7.length;
+var array8Length = array8.length;
+
+for (i = 0; i < array7Length; i++) {
+    for (j = 0; j < array8Length; j++) {
+        if (array7[i] === array8[j]) {
+            commonValues.push(array7[i]);
+        }
+    }
+}
+console.log(commonValues);
+document.write("<br>"+"<br>"+`The intersection between two arrays : `+commonValues+"<br>"+"<br>"); 
+
+
+// 14.	You are given a sentence. Write a program that capitalizes the first letter of each word in the sentence and displays the result on a web page.
+
+
+document.write(`14.	You are given a sentence. Write a program that capitalizes the first letter of each word in the sentence and displays the result on a web page.`);
+
+let sentence="this is a sample sentence";
+let words = sentence.split(" ");
+  
+  for (let i = 0; i < words.length; i++) {
+  
+    let firstLetter = words[i][0];
+  
+    let capitalizedLetter = firstLetter.toUpperCase();
+  
+    words[i] = words[i].replace(firstLetter, capitalizedLetter);
+  }
+  
+  let capitalizedSentence = words.join(" ");
+
+
+  console.log(`After capitalizes the first letter of each word in the sentence: `,capitalizedSentence);
+document.write("<br>"+"<br>"+`After capitalizes the first letter of each word in the sentence: `+capitalizedSentence+"<br>"+"<br>"); 
+
+
+// 15.	You are given an array of strings. Write a program that finds the longest string in the array and displays the result on a web page.
+
+
+
+document.write(`15.	You are given an array of strings. Write a program that finds the longest string in the array [apple, banana, orange, pear, grapefruit] and displays the result on a web page.`);
+
+
+
+let sentence1="apple, banana, orange, pear, grapefruit";
+let array = sentence1.split(" ");
+
+array.sort((a, b) => b.length - a.length)[0]; 
+
+
+  let longest_string = array[0];
+
+  console.log(`The longest string in the array [apple, banana, orange, pear, grapefruit] `,longest_string);
+document.write("<br>"+"<br>"+`The longest string in the array [apple, banana, orange, pear, grapefruit] is :  `+longest_string+"<br>"+"<br>"); 
+
+ 
+
+
+// 16.	You are given a list of names. Write a program that sorts the names in reverse alphabetical order and displays the result on a web page.
+
+
+
+document.write(`16.	You are given a list of names. Write a program that sorts the names in reverse alphabetical order and displays the result on a web page.`);
+
+let array5 = ["Coimbatore", "Skill", "Safari", "Experience"];
+
+array5.sort();
+array5.reverse();
+console.log(`The names ["Coimbatore", "Skill", "Safari", "Experience"] in reverse alphabetical order`,array5);
+document.write("<br>"+"<br>"+`The names ["Coimbatore", "Skill", "Safari", "Experience"] in reverse alphabetical order : `,array5);
+
+
+// 17.	You are given a string. Write a program that removes all whitespace characters from the string and displays the result on a web page.
+
+
+document.write("<br>"+"<br>"+` 17.	You are given a string. Write a program that removes all whitespace characters from the string and displays the result on a web page.`);
+let str = "  Hello   World!   ";
+let strWithoutSpaces = str.replace(/\s/g,'');
+
+
+console.log(`After removing all whitespace characters from the string[   Hello   World!   ]`,strWithoutSpaces);
+
+document.write("<br>"+"<br>"+`After removing all whitespace characters from the string[   Hello   World!   ] : `,strWithoutSpaces);
+
+
+// 18.	You are given a list of numbers. Write a program that finds the sum of the squares of the numbers in the list and displays the result on a web page.
+
+
+document.write("<br>"+"<br>"+`18.	You are given a list of numbers. Write a program that finds the sum of the squares of the numbers in the list and displays the result on a web page.`)
+
+let numbers=[1, 2, 3, 4, 5]
+let sum = 0;
+for (let number of numbers) { 
+  sum += number ** 2; 
+}
+
+console.log(`The sum of squares is ${sum}.`);
+document.write("<br>"+"<br>"+`The sum of squares is ${sum}.`); 
+
+
+
+// 19.	You are given a list of strings. Write a program that concatenates all the strings in the list together and displays the result on a web page.
+
+document.write("<br>"+"<br>"+`19.	You are given a list of strings. Write a program that concatenates all the strings in the list together and displays the result on a web page.`);
+
+
+let list = ["Hello", "world", "!", "This", "is", "a", "concatenation", "example"];
+
+let result = "";
+for (let i = 0; i < list.length; i++) {
+  result = result + list[i];
+}
+
+
+console.log(`After concatenation of the string ["Hello", "world", "!", "This", "is", "a", "concatenation", "example"]  `,result);
+document.write("<br>"+"<br>"+`After concatenation of the string ["Hello", "world", "!", "This", "is", "a", "concatenation", "example"]  is :    `,result); 
+
+
+
+// 20.	You are given a sentence. Write a program that finds the most common word in the sentence and displays the result on a web page.
+document.write("<br>"+"<br>"+` 20.	You are given a sentence. Write a program that finds the most common word in the sentence and displays the result on a web page.`)
+
+let sentence2 = "The quick brown fox jumps over the lazy dog.";
+let words1 = sentence2.toLowerCase().split(" ");
+let wordCounts = {};
+
+
+for (let word of words1) {
+
+  if (wordCounts[word]) {
+    wordCounts[word]++;
+  }
+  
+  else {
+    wordCounts[word] = 1;
+  }
+}
+
+
+let maxCount = 0;
+let maxWord = "";
+
+for (let word in wordCounts) {
+  
+  if (wordCounts[word] > maxCount) {
+    maxCount = wordCounts[word];
+    maxWord = word;
+  }
+}
+console.log(`The most common word in the sentence is "${maxWord}" with ${maxCount} occurrences.`);
+document.write("<br>"+"<br>"+`The most common word in the sentence is "${maxWord}" with ${maxCount} occurrences.`);
+
+
+// 21.	You are given an array of numbers. Write a program that finds the sum of all the even numbers in the array and displays the result on a web page.
+
+
+document.write("<br>"+"<br>"+`21.	You are given an array of numbers. Write a program that finds the sum of all the even numbers in the array and displays the result on a web page.`)
+
+let number1=[2, 3, 6, 8, 10, 11, 12, 15]
+let sum1 = 0;
+for (let number2 of number1) { 
+  if (number2%2==0){
+    sum1 += number2;
+  }
+   
+}
+
+console.log(`The sum of all the even numbers in the array is ${sum1}.`);
+document.write("<br>"+"<br>"+`The sum of all the even numbers in the array [2, 3, 6, 8, 10, 11, 12, 15] is ${sum1}.`); 
+
+
+
+// 22.	You are given a list of words. Write a program that finds the words that contain the letter "a" and displays the result on a web page.
+
+document.write("<br>"+"<br>"+`22.	You are given a list of words. Write a program that finds the words that contain the letter "a" and displays the result on a web page.`);
+
+
+
+let fruit="apple banana orange grape kiwi";
+fruits=fruit.split(" ");
+
+var result1 = []; 
+var regex = /a/; //A regular expression to match letter a
+for (var i = 0; i < fruits.length; i++) { //Loop over the words
+  if (regex.test(fruits[i])) { //Check if the word matches the regular expression
+    result1.push(fruits[i]); //Add the word to the result array
+  }
+}
+
+console.log(`The words that contain the letter "a" ["apple banana orange grape kiwi"]is ${result1.join(",")}`);
+document.write("<br>"+"<br>"+`The words that contain the letter "a" ["apple banana orange grape kiwi"] is  ${result1.join(", ")}.`); 
+
+
+// 23.	You are given a string. Write a program that reverses the order of the words in the string and displays the result on a web page.
+
+
+document.write("<br>"+"<br>"+`23.	You are given a string. Write a program that reverses the order of the words in the string and displays the result on a web page.`)
+
+
+let str1 = "The quick brown fox jumps over the lazy dog";
+
+let words11 = str1.split(" ");
+
+
+let reversedWords = words11.reverse();
+
+let reversedStr = reversedWords.join(" ");
+
+console.log(`The reverse order of the words in the string [The quick brown fox jumps over th e lazy dog] is ${reversedStr}`);
+document.write("<br>"+"<br>"+`The reverse order of the words in the string [The quick brown fox jumps over th e lazy dog] is   ${reversedStr}.`); 
+
+
+
+//24.	You are given a list of names. Write a program that finds the shortest name in the list and displays the result on a web page.
+
+
+document.write("<br>"+"<br>"+`24.	You are given a list of names. Write a program that finds the shortest name in the list and displays the result on a web page.`)
+
+
+var names1 = ["John", "Alice", "Bob", "Mary"];
+
+// let names1 = names.split(" ");
+var shortestName = names1.reduce(function(a, b) {
+  return a.length <= b.length ? a : b;
+});
+
+
+console.log(`The shortest name in the list [ "John, Alice, Bob, Mary"] is ${shortestName}`);
+document.write("<br>"+"<br>"+`The shortest name in the list [ "John, Alice, Bob , Mary"] is  ${shortestName}`); 
+
+
+
+
+// 25.	You are given a string. Write a program that counts the number of times a particular character appears in the string and displays the result on a web page.
+
+
+document.write("<br>"+"<br>"+`25.	You are given a string. Write a program that counts the number of times a particular character appears in the string and displays the result on a web page.`)
+
+let sentence3 = "Skill safari";
+
+let speclett= "i";
+ let words3 = sentence3.toLowerCase().split(" ");
+ let wordCounts1 = {};
+
+const freq = {};
+
+
+for (let c of sentence3) {
+  if (freq[c]) {
+    freq[c]++;
+  }
+
+  else {
+    freq[c] = 1;
+  }
+}
+
+
+
+document.write("<br>"+"<br>"+`The character "${speclett}" appears ${freq[speclett] || 0} times in the string "${sentence3}".`);
+console.log(`The character "${speclett}" appears ${freq[speclett] || 0} times in the string "${sentence3}".`);
+
+
+// 26.	You are given a list of words. Write a program that finds the words that have more than 5 letters and displays the result on a web page.
+
+document.write("<br>"+"<br>"+`26.	You are given a list of words. Write a program that finds the words that have more than 5 letters and displays the result on a web page.`)
+
+let words5 = "Skill safari is located in coimbatore.";
+let words4 = words5.split(" ");
+
+let filteredWords = words4.filter(word => word.length > 5);
+
+
+console.log(`The words that have more than 5 letters are `+filteredWords.join(" "));
+document.write("<br>"+"<br>"+`The words that have more than 5 letters are `+filteredWords.join(" "));
+
+// 27.	You are given an array of numbers. Write a program that finds the largest even number in the array and displays the result on a web page.
+
+document.write("<br>"+"<br>"+`27.	You are given an array of numbers. Write a program that finds the largest even number in the array and displays the result on a web page.`)
+
+function max_even(arra) {
+  arra.sort((x, y) => y - x); 
+  for (var i = 0; i < arra.length; i++) { 
+    if (arra[i] % 2 == 0) return arra[i]; 
+  }
+}
+console.log(`the largest even number in the array  is [1, 4, 6, 3, 8, 7, 10, 2]  is `+max_even([1, 4, 6, 3, 8, 7, 10, 2])); // output: 200
+
+document.write("<br>"+"<br>"+`the largest even number in the array  is [1, 4, 6, 3, 8, 7, 10, 2] is `+max_even([1, 4, 6, 3, 8, 7, 10, 2]));
+
+
+
+// 28.	You are given a string. Write a program that converts every letter to its corresponding ASCII value and displays the result on a web page.
+
+document.write("<br>"+"<br>"+`28.	You are given a string. Write a program that converts every letter to its corresponding ASCII value and displays the result on a web page.`)
+var str12 = "Kovai";
+var ascii = "";
+for (var i = 0; i < str12.length; i++) {
+  ascii += str12.charCodeAt(i) + " ";
+}
+console.log(`After converting every letter to its corresponding ASCII value`+ascii);
+document.write("<br>"+"<br>"+`After converting every letter "Kovai" to its corresponding ASCII value is    `+ascii);
+
+
+// 29.	You are given a string. Write a program that replaces all occurrences of a particular character with another character and displays the result on a web page.
+document.write("<br>"+"<br>"+`29.	You are given a string. Write a program that replaces all occurrences of a particular character with another character and displays the result on a web page.`);
+const str3 = 'Skill sufuri';
+const updated = str3.replace(/u/g, 'a');
+
+console.log(`After replacing the u by a in the string 'Skill sufuri' is    `+updated);
+document.write("<br>"+"<br>"+`After replacing the u by a in the string 'Skill sufuri' is    `+updated);
+
+
+
+
+
+// 30.	You are given an array of numbers. Write a program that finds the difference between the largest and smallest numbers in the array and displays the result on a web page.
+document.write("<br>"+"<br>"+`30.	You are given an array of numbers. Write a program that finds the difference between the largest and smallest numbers in the array and displays the result on a web page.`)
+
+
+let num=[2, 5, 1, 8, 3, 9];
+
+
+ 
+ for (var i = 0; i < num.length; i++) 
+
+ num.sort(function(a, b) {
+    return a - b;
+  });
+  let largest1 = num[5];
+  var smallest1 = num[0] ; 
+var diff=largest1-smallest1;
+ console.log ( " The difference between the largest and smallest numbers in the array [2, 5, 1, 8, 3, 9]   is : ",diff);
+ document.write("<br>"+ "<br>"+ " The difference between the largest and smallest numbers in the array [2, 5, 1, 8, 3, 9]   is : ",diff);
+
+
+
+</script>
+</body>
+</html>
