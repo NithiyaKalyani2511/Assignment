@@ -1,0 +1,145 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    display: block;
+    font-size: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-weight:100;
+    text-align: center;
+    padding-top: 20px;
+}
+
+p {
+
+    font-size: 32px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+#head {
+    color: white;
+    padding: 0px 20px; 
+    align-items: center;
+    height:70px;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+div {
+    margin: 20px auto;
+    width: 70%;
+    font-family:'lato';
+    padding: 5px;
+    background: #666;
+    color: #fff;
+    font-weight: bold;
+    
+}
+
+p {
+    display: block;
+    
+}
+
+ul, li {
+    list-style: none;
+    
+}
+ul {
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} 
+
+ul li:nth-child(odd) a {
+    transform: rotate(-4deg);
+    position: relative;
+    top: 5px;
+}
+ul li:nth-child(5n) a {
+    transform: rotate(5deg);
+    position: relative;
+    top: -10px;
+}
+
+
+
+
+
+
+ul li:nth-child(n)  a {
+    position: relative;
+    top: -5px;
+    background:#ffc;
+}
+
+
+ul li:nth-child(even) a {
+    position: relative;
+    top: 5px;
+    background: #cfc;
+}
+
+ul li:nth-child(even) a {
+    transform: rotate(5deg);
+    position: relative;
+    top: 5px;
+}
+
+
+ul li:nth-child(3n) a {
+    position: relative;
+    top: -5px;
+    background: #ccf;
+}
+
+
+
+ul li:nth-child(3n) a {
+    transform: rotate(-3deg);
+    position: relative;
+    top: -5px;
+} 
+
+
+
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    background: #ffc;
+    display: block;
+   height:192px;
+   width:195px;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    padding: 15px;
+   font-family: 'lato';
+    margin:20px;
+    font-style: normal;
+    font-weight: lighter;
+}
+
+ul li a:hover{
+    transition-delay: 0.1s;
+    transform: scale(1.25);
+}
+
+p{
+font-family: 'Segoe Print';
+font-size: 25px;
+}
+
+h2{
+
+    font-family: ' Serif';
+}
+   
